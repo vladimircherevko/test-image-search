@@ -1,0 +1,26 @@
+{
+  "name": "test-image-search",
+  "version": "1.0.0",
+  "description": "Test task for mova.io",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladimircherevko/test-image-search.git"
+  },
+  "keywords": [
+    "search",
+    "image"
+  ],
+  "author": {
+      "name": "Vladimir Cherevko",
+      "email": "vladimir.c.as@agiliumlabs.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vladimircherevko/test-image-search/issues"
+  },
+  "homepage": "https://github.com/vladimircherevko/test-image-search#readme"
+}
