@@ -4,7 +4,13 @@
   "description": "Test task for mova.io",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix client",
+    "dev": " concurrently \"npm run server\" \"npm run client\"",
+    "client:install": "npm install --prefix client",
+    "client:build": "npm run build --prefix client",
+    "client:test": "npm run test --prefix client"
   },
   "repository": {
     "type": "git",
@@ -15,12 +21,24 @@
     "image"
   ],
   "author": {
-      "name": "Vladimir Cherevko",
-      "email": "vladimir.c.as@agiliumlabs.com"
+    "name": "Vladimir Cherevko",
+    "email": "vladymyrcher@gmail.com"
   },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/vladimircherevko/test-image-search/issues"
   },
-  "homepage": "https://github.com/vladimircherevko/test-image-search#readme"
+  "homepage": "https://github.com/vladimircherevko/test-image-search#readme",
+  "dependencies": {
+    "express": "~4.17.1",
+    "express-validator": "~6.10.0",
+    "jsonwebtoken": "~8.5.1",
+    "mongoose": "~5.12.3",
+    "request": "~2.88.2",
+    "request-promise-any": "~1.0.9"
+  },
+  "devDependencies": {
+    "concurrently": "~6.0.1",
+    "nodemon": "~2.0.7"
+  }
 }

@@ -1,0 +1,63 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "eslint-plugin-import",
+        "justinanastos",
+        "react",
+        "sort-keys-fix",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "array-bracket-spacing": [ "error", "always" ],
+        "computed-property-spacing": [ "error", "always" ],
+        "eol-last": [ "error", "always" ],
+        "import/order": [ "error", {
+            "groups": [ "builtin", "external", "internal", "parent", "index", "sibling", "unknown" ],
+            "pathGroups": [
+                {
+                    "group": "internal",
+                    "pattern": "shared/**",
+                    "position": "before"
+                }
+            ]
+        } ],
+        "indent": [ "error", 2, {
+            "ignoredNodes": [ "JSXAttribute", "JSXSpreadAttribute" ],
+            "SwitchCase": 1
+        } ],
+        "object-curly-spacing": [ "error", "always" ],
+        "react/jsx-closing-bracket-location": [ 1, "after-props" ],
+        "react/jsx-first-prop-new-line": [ "error", "multiline" ],
+        "react/jsx-indent-props": [ 2, 2 ],
+        "react/jsx-max-props-per-line": [ "error", { "maximum": 1, "when": "always" } ],
+        "justinanastos/switch-braces": [ "error" ],
+        "no-multiple-empty-lines": [ "error", { "max": 1, "maxEOF": 1 } ],
+        "one-var": [ "error", "never" ],
+        "quotes": [ "error", "single" ],
+        "semi": [ "error", "always" ],
+        "sort-keys-fix/sort-keys-fix": [ "error", "asc", {
+            "caseSensitive": false,
+            "natural": false
+        } ],
+        "space-before-function-paren": [ "error", {
+            "anonymous": "never",
+            "named": "never",
+            "asyncArrow": "always"
+        }]
+    }
+}
